@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+// TO DO: Import our components 
+import Header from './components/Header';
+// import Navigation from './components/Navigation';
 
+// Allows us to split the UI into distinguished parts 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      {/* <Navigation /> */}
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +22,6 @@ function App() {
         >
           Learn React
         </a>
-      </header>
     </div>
   );
 }
