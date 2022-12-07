@@ -1,27 +1,35 @@
-// Components render a specific part of an applications UI
-
-// Import React package and our useState hook (State of a component is an object that holds info and can change over the lifecycle of the component)
-import React, { useState } from 'react';
-
-// Import Navigation component to nest inside our header
-import Navigation from './Navigation';
-
+import React from 'react';
 
 // If the component being imported isn't specified, import this component
 // Props is being being passed down from parent component in app.js 
-export default function Header(props) {
-  const [stateVariable, functionToUpdate] = useState('Initial Value of State Variable!');
+export default function Footer(props) {
 
-
-  // Return JSX expression that renders HTMOL
   return (
-    <div className="container">
-      <header className="header">
-          <h2 className="card-header bg-primary text-white">Header!</h2>
-          {/* Render the Navigation component from within the Header component */}
-          <Navigation />
-      </header>
-    </div>
-  );
-}
+  // <!-- Footer -->
+  <footer class="bg-light text-center ">
+    {/* <!-- Grid container --> */}
+    <div class="container p-4">
 
+      {/* <!-- Section: Social media --> */}
+      <section class="mb-4">
+        {/* <!-- Facebook --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        {/* <!-- Twitter --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+        {/* <!-- Google --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+        {/* <!-- Instagram --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+        {/* <!-- Linkedin --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        {/* <!-- Github --> */}
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+    </div>
+  </footer>
+ );
+}

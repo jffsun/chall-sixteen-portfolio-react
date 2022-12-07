@@ -1,15 +1,12 @@
 // Rendering a specific part of an applications UI
 import React, { useState } from 'react';
 
-// Import Navigation bar styling 
-import '../styles/Project.css'
-
-export default function Project(props) {
+export default function About(props) {
 
   // Return JSX expression that renders HTMOL
   return (
-    <section className="project">
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
+    <div>
+      <h1>About Me</h1>
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -25,6 +22,6 @@ export default function Project(props) {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </p>
-    </section>
+    </div>
   );
 };

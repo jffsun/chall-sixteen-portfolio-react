@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+ }
+
+.nav-container {
+  display: flex;
+  background-color: gray;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-link {
+  padding: 5px;
+  text-decoration: underline;
+}
