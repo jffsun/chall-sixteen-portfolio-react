@@ -1,5 +1,6 @@
 // Rendering a specific part of an applications UI
-import React, { useState } from 'react';
+import React from 'react';
+import Footer from '../Footer'
 
 export default function About(props) {
 
@@ -8,20 +9,37 @@ export default function About(props) {
     <div>
       <h1>About Me</h1>
       <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?
+        Who you are: 
+        Welcome to the page about me!
+
+        My name is Jeffrey and I a full stack developer based in Irvine. 
+        During my final year of university, I began working full-time in the Human Resources/People field. I worked closely with directors, managers, and     
+        and recruiters, and was praised for my work ethic, sense of urgency, people skills.
+        
+        Fast forward two years later and I have carved a new path for myself, developing web applications.
+        When I am not coding, I am bodybuilding, listening to science-related podcasts, or playing with dog Raven.
+
+        I deeply value collaboration, 
+        Working with others is deeply rewarding to me
+
+        I am someone who is collaborative and can easily mesh with others in a team environment. 
+        I am curious and have a deep love for learning.  
+
+        What can you do: 
+        When building applications, my weapons of choice are Javascript 
+        I am a MERN stack developer with experience using mySQL as well. 
+      <ul>
+        <h2>Skills</h2>
+        <li>MongoDB</li>
+        <li>mySQL</li>
+        <li>Express</li>
+        <li>React</li>
+        <li>PWAs</li>
+        <li>CSS</li>
+        <li>HTML</li>
+      </ul>
       </p>
+   
     </div>
   );
 };

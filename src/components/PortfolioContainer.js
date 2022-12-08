@@ -15,14 +15,16 @@ import Resume from './pages/Resume';
 export default function PortfolioContainer() {
 
   // stateVariable 'currentPage' is updated with 'setCurrentPage' function
-  // Set intial value of currentPage to Home 
-  const [currentPage, setCurrentPage] = useState('Home');
+  // Set intial value of currentPage to About 
+  const [currentPage, setCurrentPage] = useState('About');
 
-  // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
+  // Checks value of `currentPage` is and render the corresponding page component accordingly
   const renderPage = () => {
 
-    // If stateVariable 'currentPage' equals home
+    // If stateVariable 'currentPage' equals About
     if (currentPage === 'About') {
+
+      // Return the JSX of the About page component
       return <About />;
     }
     if (currentPage === 'Portfolio') {
@@ -37,12 +39,14 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div className="portfolio-container">
       <Header />
       {/* We are passing the currentPage from state and the function to update it */}
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
+      <Footer />
     </div>
+
   );
 }
