@@ -1,22 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
+    // stateVariable 'formStatus' is updated with setFormStatus function
+    // Change text of submit button depending on state of form
+    const [formStatus, setFormStatus] = useState('Submit');
+
+    // Handles form submission
+    const submitHandler = (e) => {
+
+      // Prevents form from being submit immediately so we can deconstruct the form's input] first
+      e.preventDefault()
+
+      // Update the formStatus state
+      setFormStatus('Submitting')
+
+      // Destructuring assignment to pluck off the form's values
+      const { name, email, message } = e.target.elements
+      let contactInput = {
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      }
+      console.log(contactInput)
+  }
+
   return (
     <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <h1>Contact Me</h1>
+      <form onSubmit={submitHandler}>
+        <div>
+          <label type="name">
+            Name
+          </label>
+          <input type="text" id="name"></input>
+        </div>
+        <div>
+          <label type="email">
+            Email
+          </label>
+          <input type="email" id="email" placeholder="Write your message here..."></input>
+        </div>
+        <div>
+          <label type="message">
+            Message
+          </label>
+          <input type="text" id="message"></input>
+        </div>
+        <button className="btn btn-warning" type="submit">{formStatus}</button>
+      </form>
     </div>
   );
-}
+};
