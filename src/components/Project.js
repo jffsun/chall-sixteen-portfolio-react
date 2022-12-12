@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 
 // Import Navigation bar styling 
 import '../styles/Project.css'
+import '../projects.json'
+
 
 export default function Project(props) {
 

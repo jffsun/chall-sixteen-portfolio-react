@@ -1,0 +1,41 @@
+{
+ "projects": [
+  {
+    "title": "Teacher's Pet",
+    "github": "https://github.com/jffsun/teachers-pet",
+    "technology": "MVC",
+    "deployed": "https://aqueous-wildwood-21593.herokuapp.com/"
+  },
+  {
+    "title": "Doggy Daycare",
+    "technology": "MERN",
+    "github": "https://github.com/jffsun/doggy-daycare",
+    "deployed": "https://placeholder.com/"
+  },
+  {
+    "title": "Social Network API",
+    "github": "https://github.com/jffsun/chall-fourteen-social-network-api",
+    "technology": "MongoDB",
+    "deployed": "https://placeholder.com/"
+  },
+  {
+    "title": "Tech Blog",
+    "github": "https://github.com/jffsun/chall-twelve-tech-blog",
+    "technology": "MVC",
+    "deployed": "https://glacial-castle-86468.herokuapp.com/"
+  },
+  {
+    "title": "Employee Tracker",
+    "technology": "SQL",
+    "github": "https://github.com/jffsun/chall-ten-employee-tracker",
+    "deployed": "https://placeholder.com/"
+  },
+  {
+    "title": "Team Profile Generator",
+    "github": "https://github.com/jffsun/chall-eight-team-generator",
+    "technology": "OOP",
+    "deployed": "https://placeholder.com/"
+  }
+ ]
+  
+}

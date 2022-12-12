@@ -1,6 +1,5 @@
 // Rendering a specific part of an applications UI
 import React from 'react';
-import Footer from '../Footer'
 
 export default function About(props) {
 
