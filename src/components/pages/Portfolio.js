@@ -1,26 +1,90 @@
 import React from 'react';
 
-export default function Portfolio() {
-  // TO DO: Define Project Data object with - image/gif, title, link, and Github link for each project
+// Import Navigation bar styling 
+import '../../styles/Portfolio.css'
 
-  // TO DO: Create each outline
+const projects = [
+  {
+    title: "Teacher's Pet",
+    github: "https://github.com/jffsun/teachers-pet",
+    technology: "MVC",
+    deployed: "https://aqueous-wildwood-21593.herokuapp.com/"
+  },
+  {
+    title: "Doggy Daycare",
+    github: "https://github.com/jffsun/doggy-daycare",
+    technology: "MERN",
+    deployed: "https://placeholder.com/"
+  },
+  {
+    title: "Social Network API",
+    github: "https://github.com/jffsun/chall-fourteen-social-network-api",
+    technology: "MongoDB",
+    deployed: "https://placeholder.com/"
+  },
+  {
+    title: "Tech Blog",
+    github: "https://github.com/jffsun/chall-twelve-tech-blog",
+    technology: "MVC",
+    deployed: "https://glacial-castle-86468.herokuapp.com/"
+  },
+  {
+    title: "Employee Tracker",
+    technology: "SQL",
+    github: "https://github.com/jffsun/chall-ten-employee-tracker",
+    deployed: "https://placeholder.com/"
+  },
+  {
+    title: "Team Profile Generator",
+    github: "https://github.com/jffsun/chall-eight-team-generator",
+    technology: "OOP",
+    deployed: "https://placeholder.com/"
+  }
+ ]
+
+export default function Portfolio() {
+
+    // Function takes project's title
+    function imageFile (projectTitle) {
+      
+      // Remove apostrophes, coerce title lowercase, and split string into individual elements in an array
+      const titleSplit = projectTitle.replace("'", "").toLowerCase().split(' ')
+
+      // Join words tgether with '-'
+      return titleSplit.join('-') + '.png'
+    } 
+
+  // Function will create JSX for each project in projects array 
+  const projectsJSX = projects.map((project) => {
+    return (
+      <div className="container">
+        {/* Items will all appear in a row */}
+        <div className="row img-wrapper">
+          <h1>{project.title}</h1>
+            <img src=
+            {imageFile(project.title)} 
+            alt={project.title}
+            className="img-responsive">
+            </img>
+            <p>{project.technology}</p>
+            <div className="img-overlay">
+              {/* Github Link */}
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-md">Github</button>
+              </a>
+              {/* Heroku Link */}
+              <a href={project.deployed} target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-md">Heroku</button>
+              </a>
+            </div>
+        </div>
+      </div>
+    );
+  });
   return (
     <div>
-      <h1>Portfolio Page</h1>
-      {/* Projects */}
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+       <h1>Portfolio</h1>
+      {projectsJSX}
     </div>
-  );
-}
+  )
+};
