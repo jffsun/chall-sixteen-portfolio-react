@@ -1,19 +1,18 @@
-// Components render a specific part of an applications UI
+// Import React package
+import React from 'react';
 
-// Import React package and our useState hook (State of a component is an object that holds info and can change over the lifecycle of the component)
-import React, { useState } from 'react';
+// Import Header styling 
+import '../styles/Header.css'
 
 // If the component being imported isn't specified, import this component
 // Props is being being passed down from parent component in app.js 
-export default function Header(props) {
+export default function Header() {
 
   // Return JSX expression that renders HTMOL
   return (
-    <div className="container">
-      <header className="header">
-          <h2 className="card-header bg-primary text-white">Jeffrey</h2>
+      <header className="header-container">
+          <h1 className="card-header text-white">Jeffrey</h1>
       </header>
-    </div>
   );
 }
 

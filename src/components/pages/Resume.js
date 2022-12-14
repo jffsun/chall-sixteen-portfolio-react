@@ -1,21 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { Document, Page } from 'react-pdf'
 
 export default function Resume() {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNum, setPageNum] = useState(1);
+
+  const onButtonClick = () => {
+      
+      fetch('Jeffrey_Sun_Resume.pdf').then(response => {
+
+          // Blob is raw data that the file interface is based on
+          response.blob().then(blob => {
+              // Creating new object of PDF file
+              const fileURL = window.URL.createObjectURL(blob);
+              // Setting various property values
+              let alink = document.createElement('a');
+              alink.href = fileURL;
+              alink.download = 'Jeffrey_Sun_Resume.pdf';
+              alink.click();
+          })
+      })
+  }
+
   return (
     <div>
       <h1>Resume</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+      <h3>Click on below button to download my resume</h3>
+      <button onClick={onButtonClick}>
+          Download
+      </button>
     </div>
   );
 }

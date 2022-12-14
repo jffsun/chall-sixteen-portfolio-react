@@ -39,7 +39,8 @@ export default function PortfolioContainer() {
 
   return (
     <div className="portfolio-container">
-      <Header />
+      
+      <Header/>
       {/* We are passing the currentPage from state and the function to update it */}
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}

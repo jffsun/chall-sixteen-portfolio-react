@@ -2,11 +2,15 @@ ul {
   list-style-type: none;
  }
 
+ a {
+  font-size: 30px;
+ }
+
 .nav-container {
+  padding: 5px, 30px;
   display: flex;
   background-color: gray;
-  width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .navigation-link {
