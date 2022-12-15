@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // Here we import a helper function that will check if the email is valid
 import { validateEmail } from '../../utils/helpers';
 
+// Import CSS styling for Contact page
+import '../../styles/Contact.css'
+
 // Controlled input: Get the name and value of the input that triggered the change
 // We set the state of that field TO the input
 // The HTML's value equals the state of that field.
@@ -48,32 +51,34 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <p>Contact Me</p>
-      <form className="form">
-      <input
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Name"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="message"
-          placeholder="Write message here..."
-        />
-        <button type="button" disabled={!submitEnabled} onClick={handleFormSubmit}>Submit</button>
-      </form>
+    <div className="contact-container">
+      <h2>Contact Me</h2>
+      <div>
+        <form className="form fields-container">
+          <input
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="Email"
+            />
+            <textarea cols="70" rows="10"  
+              value={message}
+              name="message"
+              onChange={handleInputChange}
+              type="message"
+              placeholder="Write message here...">
+            </textarea>
+          <button type="button" disabled={!submitEnabled} onClick={handleFormSubmit}>Submit</button>
+        </form>
+        </div>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>

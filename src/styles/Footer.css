@@ -1,3 +1,28 @@
-.social-media-links {
-  display: flex;
+a {
+  padding: 10px;
 }
+
+
+footer{
+  height: 100px; 
+  width:100%;
+  position: fixed;
+  left: 40%;
+  bottom: 0; 
+}
+
+.footer-link {
+  color: grey;
+}
+
+/* .social-media-links {
+  display: flex; 
+  padding: 10px 50px; 
+  justify-content: space-between;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+} */

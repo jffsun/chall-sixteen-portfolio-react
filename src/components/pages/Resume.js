@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { Document, Page } from 'react-pdf'
 
+import '../../styles/Resume.css'
+
 export default function Resume() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNum, setPageNum] = useState(1);
 
   const onButtonClick = () => {
       
@@ -25,10 +25,12 @@ export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
-      <h3>Click on below button to download my resume</h3>
-      <button onClick={onButtonClick}>
+      <div className="resume-container">
+        <h3>Click to download</h3>
+        <button onClick={onButtonClick}>
           Download
-      </button>
+        </button>
+      </div>
     </div>
   );
 }

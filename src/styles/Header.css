@@ -1,9 +1,10 @@
 .header-container {
-  background-color: green;
+  background-color: #DAFAB0;
   padding: 40px;
   width: 100%;
+  font-size: 90px;
 }
 
 h1 {
-  font-size: 64px;
+  color: black;
 }

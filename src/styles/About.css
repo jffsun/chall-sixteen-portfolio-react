@@ -1,5 +1,15 @@
+.body-container {
+  background-color: rgb(54, 53, 55);
+  height: 400px;
+}
+
+h1 {
+  color: rgb(248, 252, 218);
+}
+
 p {
   font-size: 26px;
+  color: rgb(248, 252, 218);
 }
 
 .body-container {

@@ -1,0 +1,13 @@
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
