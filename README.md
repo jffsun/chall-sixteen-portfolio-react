@@ -1,4 +1,4 @@
-# Challenge Sixten: React - Portfolio
+# Challenge Sixteen: React - Portfolio
 
 ## Project Description
 
