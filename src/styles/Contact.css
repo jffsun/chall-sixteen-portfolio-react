@@ -1,13 +1,35 @@
+.contact-container {
+  background-color: rgb(54, 53, 55);
+  text-align: center;
+}
+
 .fields-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+  width: 60%;
 }
 
 input {
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
-  margin-bottom: 30px;
   box-sizing: border-box;
+}
+
+textarea {
+  width: 60%;
+}
+
+button {
+  width: 20%
+}
+
+.contact-container h1 {
+  padding: 20px 0px;
 }

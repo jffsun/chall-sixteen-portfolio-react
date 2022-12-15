@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Document, Page } from 'react-pdf'
 
 import '../../styles/Resume.css'
 
@@ -23,7 +22,7 @@ export default function Resume() {
   }
 
   return (
-    <div>
+    <div className="resume">
       <h1>Resume</h1>
       <div className="resume-container">
         <h3>Click to download</h3>

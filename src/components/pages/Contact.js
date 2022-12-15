@@ -52,16 +52,19 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
-      <h2>Contact Me</h2>
+      <h1>Contact Me</h1>
       <div>
-        <form className="form fields-container">
-          <input
-              value={name}
-              name="name"
-              onChange={handleInputChange}
-              type="text"
-              placeholder="Name"
-            />
+        <form className="fields-container">
+          <div className="input-field">
+            <input
+                value={name}
+                name="name"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Name"
+              />
+           </div>
+           <div className="input-field">
             <input
               value={email}
               name="email"
@@ -69,13 +72,16 @@ export default function Contact() {
               type="email"
               placeholder="Email"
             />
-            <textarea cols="70" rows="10"  
-              value={message}
-              name="message"
-              onChange={handleInputChange}
-              type="message"
-              placeholder="Write message here...">
-            </textarea>
+           </div>
+           <div className="input-field">
+              <textarea cols="70" rows="10"  
+                value={message}
+                name="message"
+                onChange={handleInputChange}
+                type="message"
+                placeholder="Write message here...">
+              </textarea>
+            </div>
           <button type="button" disabled={!submitEnabled} onClick={handleFormSubmit}>Submit</button>
         </form>
         </div>

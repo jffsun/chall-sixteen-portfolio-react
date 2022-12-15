@@ -9,7 +9,7 @@ export default function Header() {
   // Return JSX expression that renders Header's HTMOL
   return (
       <header>
-          <div className="header-container">
+          <div className="header-page">
             <h1>Jeffrey</h1>
           </div>
       </header>
