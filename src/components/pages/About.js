@@ -1,5 +1,6 @@
 // Rendering a specific part of an applications UI
 import React from 'react';
+import JeffreyProfessional from '../../images/JeffreyProfessional.png'
 
 // Import About page component styling
 import '../../styles/About.css'
@@ -11,7 +12,7 @@ export default function About() {
     <div className="body-container">
       <h1>About Me</h1>
       <div className="about-body">
-        <img src="JeffreyProfessional.png" alt="Jeffrey Portrait" width="300" height="300"></img>
+        <img src={JeffreyProfessional} alt="Jeffrey Portrait" width="300" height="300"></img>
         <p>
           My name is Jeffrey and I am full stack developer based in Irvine. 
           A third into my final year my university, I wanted to jumpstart my career and began working full-time in the Human Resources while finishing my courses. 
