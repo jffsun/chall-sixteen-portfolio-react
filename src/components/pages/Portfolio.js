@@ -1,30 +1,32 @@
 import React from 'react';
 
-// Import Navigation bar styling 
 import '../../styles/Portfolio.css';
 
 const projects = [
   {
     title: "Teacher's Pet",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/blob/main/src/images/teachers-pet.png",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/teachers-pet.png",
     github: "https://github.com/jffsun/teachers-pet",
     technology: "MVC",
     deployed: "https://aqueous-wildwood-21593.herokuapp.com/"
   },
   {
     title: "Doggy Daycare",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/doggy-daycare.png",
     github: "https://github.com/jffsun/doggy-daycare",
     technology: "MERN",
     deployed: "https://placeholder.com/"
   },
   {
     title: "Social Network API",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/social-network-api.png",
     github: "https://github.com/jffsun/chall-fourteen-social-network-api",
     technology: "MongoDB",
     deployed: "https://placeholder.com/"
   },
   {
     title: "Tech Blog",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/tech-blog.png",
     github: "https://github.com/jffsun/chall-twelve-tech-blog",
     technology: "MVC",
     deployed: "https://glacial-castle-86468.herokuapp.com/"
@@ -32,11 +34,13 @@ const projects = [
   {
     title: "Employee Tracker",
     technology: "SQL",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/employee-tracker.png",
     github: "https://github.com/jffsun/chall-ten-employee-tracker",
     deployed: "https://placeholder.com/"
   },
   {
     title: "Team Generator",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/team-generator.png",
     github: "https://github.com/jffsun/chall-eight-team-generator",
     technology: "OOP",
     deployed: "https://placeholder.com/"
