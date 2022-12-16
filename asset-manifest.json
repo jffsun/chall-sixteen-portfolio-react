@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css",
+    "main.js": "/chall-sixteen-portfolio-react/static/js/main.3ce43f22.js",
+    "index.html": "/chall-sixteen-portfolio-react/index.html",
+    "main.6483a923.css.map": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css.map",
+    "main.3ce43f22.js.map": "/chall-sixteen-portfolio-react/static/js/main.3ce43f22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6483a923.css",
+    "static/js/main.3ce43f22.js"
+  ]
+}
