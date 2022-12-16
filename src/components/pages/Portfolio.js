@@ -10,7 +10,7 @@ import '../../images';
 const projects = [
   {
     title: "Teacher's Pet",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/blob/main/src/images/teachers-pet.png",
     github: "https://github.com/jffsun/teachers-pet",
     technology: "MVC",
     deployed: "https://aqueous-wildwood-21593.herokuapp.com/"
@@ -66,10 +66,10 @@ export default function Portfolio() {
         {/* Items will all appear in a row */}
         <div className="row img-wrapper">
 
-            <img src=
-            {imageFile(project.title)} 
-            alt={project.title}
-            className="img-responsive">
+            <img src={project.image}>
+            {/* // {imageFile(project.title)} 
+            // alt={project.title}
+            // className="img-responsive"> */}
             </img>
         
             <div className="img-overlay">
