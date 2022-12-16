@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/chall-sixteen-portfolio-react/portfolio-react/static/css/main.6483a923.css",
-    "main.js": "/chall-sixteen-portfolio-react/portfolio-react/static/js/main.1c9a22ae.js",
-    "static/media/JeffreyProfessional.png": "/chall-sixteen-portfolio-react/portfolio-react/static/media/JeffreyProfessional.08b894aac1950f16590d.png",
-    "index.html": "/chall-sixteen-portfolio-react/portfolio-react/index.html",
-    "main.6483a923.css.map": "/chall-sixteen-portfolio-react/portfolio-react/static/css/main.6483a923.css.map",
-    "main.1c9a22ae.js.map": "/chall-sixteen-portfolio-react/portfolio-react/static/js/main.1c9a22ae.js.map"
+    "main.css": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css",
+    "main.js": "/chall-sixteen-portfolio-react/static/js/main.1967ae2a.js",
+    "static/media/JeffreyProfessional.png": "/chall-sixteen-portfolio-react/static/media/JeffreyProfessional.08b894aac1950f16590d.png",
+    "index.html": "/chall-sixteen-portfolio-react/index.html",
+    "main.6483a923.css.map": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css.map",
+    "main.1967ae2a.js.map": "/chall-sixteen-portfolio-react/static/js/main.1967ae2a.js.map"
   },
   "entrypoints": [
     "static/css/main.6483a923.css",
-    "static/js/main.1c9a22ae.js"
+    "static/js/main.1967ae2a.js"
   ]
 }
