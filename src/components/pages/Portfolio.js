@@ -2,10 +2,6 @@ import React from 'react';
 
 // Import Navigation bar styling 
 import '../../styles/Portfolio.css';
-import '../../images';
-
-
-
 
 const projects = [
   {
