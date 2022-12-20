@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css",
-    "main.js": "/chall-sixteen-portfolio-react/static/js/main.558fac33.js",
+    "main.js": "/chall-sixteen-portfolio-react/static/js/main.82606b7f.js",
     "static/media/JeffreyProfessional.png": "/chall-sixteen-portfolio-react/static/media/JeffreyProfessional.08b894aac1950f16590d.png",
     "index.html": "/chall-sixteen-portfolio-react/index.html",
     "main.6483a923.css.map": "/chall-sixteen-portfolio-react/static/css/main.6483a923.css.map",
-    "main.558fac33.js.map": "/chall-sixteen-portfolio-react/static/js/main.558fac33.js.map"
+    "main.82606b7f.js.map": "/chall-sixteen-portfolio-react/static/js/main.82606b7f.js.map"
   },
   "entrypoints": [
     "static/css/main.6483a923.css",
-    "static/js/main.558fac33.js"
+    "static/js/main.82606b7f.js"
   ]
 }
