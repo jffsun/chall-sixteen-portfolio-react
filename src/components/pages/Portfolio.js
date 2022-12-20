@@ -15,7 +15,7 @@ const projects = [
     image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/doggy-daycare.png",
     github: "https://github.com/jffsun/doggy-daycare",
     technology: "MERN",
-    deployed: "https://placeholder.com/"
+    deployed: "https://lit-everglades-07230.herokuapp.com/"
   },
   {
     title: "Social Network API",
