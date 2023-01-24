@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../../styles/Portfolio.css';
 
+// TO DO: All Heroku links should be working (Insert bodybuilding, fitness, calorie tracker app)
 const projects = [
   {
     title: "Teacher's Pet",
@@ -49,7 +50,7 @@ const projects = [
 
 export default function Portfolio() {
 
-    // Function takes project's title
+    // Converts project's title into its image file name 
     function imageFile (projectTitle) {
       
       // Remove apostrophes, coerce title lowercase, and split string into individual elements in an array
@@ -59,19 +60,16 @@ export default function Portfolio() {
       return titleSplit.join('-') + '.png'
     } 
 
-  // Function will create JSX for each project in projects array 
+  // Creates JSX for each project in projects array 
   const allProjects = projects.map((project) => {
     return (
       <div className="project rounded">
         {/* Items will all appear in a row */}
         <div className="row img-wrapper">
 
-            <img src={project.image}>
-            {/* // {imageFile(project.title)} 
-            // alt={project.title}
-            // className="img-responsive"> */}
-            </img>
-        
+            <img src={project.image}></img>
+
+            {/* Content overlaid on project images */}
             <div className="img-overlay">
               <div className="project-title">
                 <h2>{project.technology} {project.title}</h2>

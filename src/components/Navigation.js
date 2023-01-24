@@ -4,16 +4,17 @@ import React from 'react';
 // Import Navigation bar styling 
 import '../styles/Navigation.css'
 
-// Destructure props 'currentPage' and 'handlePageChange' passed into Navigation() 
+// Destructure props 'currentPage' and 'handlePageChange' passed from parent "PortfolioContainer"
 export default function Navigation({ currentPage, handlePageChange}) {
   return (
-    // Unordered list containing links to each portfolio page
+    // List with links to each portfolio page
     <ul className="nav-container">
     <li>
       <a
         href="#about"
+        // On click, call handlePageChange function that sets currentPage state variable to 'About'
         onClick={() => handlePageChange('About')}
-        // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+        // If the currentPage is 'About', set it's link to active and if not set to inactive
         className={currentPage === 'About' ? 'navigation-link active' : 'navigation-link'}
       >
         About Me

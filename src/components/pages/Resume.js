@@ -4,6 +4,7 @@ import '../../styles/Resume.css'
 
 export default function Resume() {
 
+  // Function that fetches professional resume pdf and downloads for user
   const onButtonClick = () => {
       
       fetch('Jeffrey_Sun_Resume.pdf').then(response => {

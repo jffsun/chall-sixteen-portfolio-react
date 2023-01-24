@@ -1,39 +1,50 @@
 import React, { useState } from 'react';
 
-// Here we import a helper function that will check if the email is valid
+// Here we import a helper regex function that checks if email format is valid
 import { validateEmail } from '../../utils/helpers';
 
 // Import CSS styling for Contact page
 import '../../styles/Contact.css'
 
-// Controlled input: Get the name and value of the input that triggered the change
-// We set the state of that field TO the input
+// Controlled input: Get the name and value from the fields that triggered the change
+// Set the state of that field TO the given input
 // The HTML's value equals the state of that field.
 
 export default function Contact() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
+  // Create state variables for the fields in the form, setting initial values to empty string
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Enable submit button if no fields are blank
   const submitEnabled = name.length > 0 && email.length > 0 && message.length > 0
 
+  // Gets name & value of the input field that user targets for a controlled component
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
+
+    // Reassign event to the deconstructed target property (the input field)
+    // const "target", or the input tag, is nested in a div and must be deconstructed
     const { target } = e;
+
+    // const "inputType" represents the name property of the targeted input field
     const inputType = target.name;
+
+    // const "inputValue" represents the value inside the targeted input field
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either name, email, or message to the corresponding input 
+    // If the input that was changed was the "name" field, then set name state to value given inside the name field
     if (inputType === 'name') {
       setName(inputValue);
+
+     // If the input that was changed was the "email" field, then set email state to value given inside the email field
     } else if (inputType === 'email') {
       setEmail(inputValue);
 
-      // After setting the state of the email, validate email input and render error message if fail 
+      // If email invalid, set error message. If valid, render only blank error message
       !validateEmail(email) ? setErrorMessage('Invalid Email') : setErrorMessage('');      
+    // If the input that was changed was the "message" field, then set message state to value given inside the message field
     } else {
       setMessage(inputValue);
     }
@@ -43,7 +54,8 @@ export default function Contact() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    // Clear out the input after a successful contact message sent
+    // TO DO: Email pop up to send real email
     setName('');
     setEmail('');
     setMessage('');
