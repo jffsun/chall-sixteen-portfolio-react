@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+
 // Import components seen throughout portfolio
 import Header from './Header'
 import Navigation from './Navigation';
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 // Import our various page components
 import About from './pages/About';
@@ -10,14 +12,15 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
+
 // Handles all state changes which dictates which page the user is viewing
 export default function PortfolioContainer() {
 
   // stateVariable 'currentPage' is updated with 'setCurrentPage' function
-  // Set intial value of currentPage to About 
+  // Set "About" page to first page user sees
   const [currentPage, setCurrentPage] = useState('About');
 
-  // Checks value of `currentPage` is and render the corresponding page component accordingly
+  // Checks value of `currentPage` and renders the corresponding page component accordingly
   const renderPage = () => {
 
     // If stateVariable 'currentPage' equals About
@@ -35,15 +38,15 @@ export default function PortfolioContainer() {
     return <Resume />;
   };
 
+  // Takes given page chosen in Navigation and changes state of currentPage accordingly
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div className="portfolio-container">
-      
-      <Header/>
-      {/* We are passing the currentPage from state and the function to update it */}
+      {/* Passing the currentPage and function to update page as props into Navigation */}
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Here we are calling the renderPage method which will return a component  */}
+      <Header/>
+      {/* Returns page component depending on currentPage's state */}
       {renderPage()}
       <Footer />
     </div>

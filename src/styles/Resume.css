@@ -3,8 +3,8 @@ html,body{
 }
 
 .resume {
-  text-align: center;
   background-color: rgb(54, 53, 55);
+  text-align: center;
   padding-bottom: 400px;
   padding-top: 40px;
 }

@@ -9,17 +9,17 @@ export default function About() {
 
   // Return JSX expression that renders HTMOL
   return (
-    <div className="body-container">
-      <h1>About Me</h1>
-      <div className="about-body">
-        <img src={JeffreyProfessional} alt="Jeffrey Portrait" width="300" height="300"></img>
-        <p>
-          My name is Jeffrey and I am full stack developer based in Irvine. 
-          A third into my final year my university, I wanted to jumpstart my career and began working full-time in the Human Resources while finishing my courses. 
-          In HR, I worked closely with directors and recruiters, and was praised for my work ethic and people skills. However, I learned that I wanted to pursue 
-          a more technical role. What started as basic python tutorial eventually led to a web-development bootcamp certificate and the ability to create web applications. 
-          When I'm not coding, I am focused on bodybuilding, listening to science-related podcasts, or playing with dog Raven!
-        </p>
+    <div className="about-container">
+      <div className="portrait-container">
+        <div className="portrait-captions">
+          <h1>Full Stack Developer.</h1>
+          <h3>I like creating fun, practical web applications</h3>
+        </div>
+        <img className="portrait-img" src={JeffreyProfessional} alt="Jeffrey Portrait" width="500" height="500"></img>
+      </div>
+      <div className="captions">
+        {/* TO DO: Update to shorter version of LinkedIn profile */}
+       <p>Skilled in Javascript, React, Redux, jQuery, Node.js, HTML5, CSS3, Mongodb, MySQL.</p>
       </div>  
     </div>
   );

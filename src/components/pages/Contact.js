@@ -23,27 +23,24 @@ export default function Contact() {
   // Gets name & value of the input field that user targets for a controlled component
   const handleInputChange = (e) => {
 
-    // Reassign event to the deconstructed target property (the input field)
-    // const "target", or the input tag, is nested in a div and must be deconstructed
-    const { target } = e;
-
     // const "inputType" represents the name property of the targeted input field
-    const inputType = target.name;
+    const inputType = e.target.name;
 
     // const "inputValue" represents the value inside the targeted input field
-    const inputValue = target.value;
+    const inputValue = e.target.value;
 
     // Based on the input type, we set the state of either name, email, or message to the corresponding input 
     // If the input that was changed was the "name" field, then set name state to value given inside the name field
     if (inputType === 'name') {
       setName(inputValue);
+      console.log(name);
 
      // If the input that was changed was the "email" field, then set email state to value given inside the email field
     } else if (inputType === 'email') {
       setEmail(inputValue);
 
       // If email invalid, set error message. If valid, render only blank error message
-      !validateEmail(email) ? setErrorMessage('Invalid Email') : setErrorMessage('');      
+      !validateEmail(email) ? setErrorMessage('Enter Valid Email') : setErrorMessage('');      
     // If the input that was changed was the "message" field, then set message state to value given inside the message field
     } else {
       setMessage(inputValue);
@@ -54,12 +51,14 @@ export default function Contact() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // Clear out the input after a successful contact message sent
-    // TO DO: Email pop up to send real email
+    // Open user's default mail app and populate info into email's Subject and Body 
+    window.open(`mailto:jeffreysun811@gmail.com?subject=New Message From ${name}&body=${message}`);
+
+    // Clear out fields after message submits
     setName('');
     setEmail('');
     setMessage('');
-    setErrorMessage('')
+    setErrorMessage('');
   };
 
   return (
@@ -72,7 +71,6 @@ export default function Contact() {
                 value={name}
                 name="name"
                 onChange={handleInputChange}
-                type="text"
                 placeholder="Name"
               />
            </div>
@@ -81,27 +79,25 @@ export default function Contact() {
               value={email}
               name="email"
               onChange={handleInputChange}
-              type="email"
               placeholder="Email"
             />
            </div>
+           {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+           )}
            <div className="input-field">
               <textarea cols="70" rows="10"  
                 value={message}
                 name="message"
                 onChange={handleInputChange}
-                type="message"
                 placeholder="Write message here...">
               </textarea>
             </div>
           <button type="button" disabled={!submitEnabled} onClick={handleFormSubmit}>Submit</button>
         </form>
         </div>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
     </div>
   );
 }

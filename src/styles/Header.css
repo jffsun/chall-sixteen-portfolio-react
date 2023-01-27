@@ -3,13 +3,14 @@ html,body{
 }
 
 .header-page {
-  background-color: #DAFAB0;
+  background-color:#1C95C2;
   margin: 0;
   padding: 70px;
 }
 
 .header-page h1 {
-  font-size: 90px;
-  font-family: revert;
-  color: black;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(248, 252, 218);
 }

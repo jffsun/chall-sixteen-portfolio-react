@@ -3,8 +3,31 @@ ul {
  }
 
  a {
+  color: rgb(248, 252, 218);
   font-size: 30px;
  }
+
+.dropdown-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content:flex-end;
+}
+
+.dropdown-container button {
+  width: 100%;
+  text-align: center;
+  justify-content: right;
+  font-size: 30px;
+  margin-right: 20px;
+  background-color: rgb(248, 112, 96);
+}
+
+.dropdown-container li {
+  margin-bottom: 5px;
+  width: 100%;
+  background-color:#1C95C2;
+}
 
 .nav-container {
   padding-right: 50px;
@@ -20,5 +43,5 @@ ul {
 }
 
 .navigation-link:hover {
-  color: rgb(54, 53, 55);
+  color: lightgray;
 }

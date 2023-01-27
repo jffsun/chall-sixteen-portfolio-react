@@ -11,8 +11,7 @@ export default function Header() {
   return (
       <header>
           <div className="header-page">
-            <h1>Jeffrey Sun</h1>
-            <h2>Full Stack Developer</h2>
+            <h1>JEFFREY</h1>
           </div>
       </header>
   );

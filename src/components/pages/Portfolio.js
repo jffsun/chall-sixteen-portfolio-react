@@ -19,46 +19,15 @@ const projects = [
     deployed: "https://lit-everglades-07230.herokuapp.com/"
   },
   {
-    title: "Social Network API",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/social-network-api.png",
-    github: "https://github.com/jffsun/chall-fourteen-social-network-api",
-    technology: "MongoDB",
-    deployed: "https://placeholder.com/"
-  },
-  {
-    title: "Tech Blog",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/tech-blog.png",
-    github: "https://github.com/jffsun/chall-twelve-tech-blog",
-    technology: "MVC",
-    deployed: "https://glacial-castle-86468.herokuapp.com/"
-  },
-  {
-    title: "Employee Tracker",
-    technology: "SQL",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/employee-tracker.png",
-    github: "https://github.com/jffsun/chall-ten-employee-tracker",
-    deployed: "https://placeholder.com/"
-  },
-  {
-    title: "Team Generator",
-    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/team-generator.png",
-    github: "https://github.com/jffsun/chall-eight-team-generator",
-    technology: "OOP",
-    deployed: "https://placeholder.com/"
+    title: "Train Track (In Development)",
+    image: "https://raw.githubusercontent.com/jffsun/chall-sixteen-portfolio-react/main/src/images/train-track.png",
+    github: "https://github.com/jffsun/train-track",
+    technology: "MERN",
+    deployed: ""
   }
  ]
 
 export default function Portfolio() {
-
-    // Converts project's title into its image file name 
-    function imageFile (projectTitle) {
-      
-      // Remove apostrophes, coerce title lowercase, and split string into individual elements in an array
-      const titleSplit = projectTitle.replace("'", "").toLowerCase().split(' ')
-
-      // Join words tgether with '-'
-      return titleSplit.join('-') + '.png'
-    } 
 
   // Creates JSX for each project in projects array 
   const allProjects = projects.map((project) => {
@@ -66,9 +35,7 @@ export default function Portfolio() {
       <div className="project rounded">
         {/* Items will all appear in a row */}
         <div className="row img-wrapper">
-
             <img src={project.image}></img>
-
             {/* Content overlaid on project images */}
             <div className="img-overlay">
               <div className="project-title">
@@ -95,7 +62,7 @@ export default function Portfolio() {
   });
   return (
     <div className="portfolio">
-       <h1>Portfolio</h1>
+       <h1>Projects</h1>
        <div className="projects-container">
         {allProjects}
       </div>
